@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" type="submit">
+        <h1>Metody tablicowe</h1>
+        <fieldset>
+            <legend>Dodawanie</legend>
+            Imie: <input type="text" name="name" id="nameInput">
+            Miasto: <input type="text" name="city" id="cityInput">
+            Wiek: <input type="number" name="age" id="ageInput">
+            <button type="button" id="addBtn">Dodaj</button>
+            <br>
+            <ul id="displayTable" class="hidden"></ul>
+        </fieldset>
+        <fieldset>
+            <legend>Wyszukiwanie</legend>
+            <label for="search"> 
+                Wyszukiwanie po:
+                <select name="search" id="search" >
+                    <option value="name">Imie</option>
+                    <option value="city">Miasto</option>
+                    <option value="age">Wiek</option>
+                </select>
+            </label>
+            <input type="text" id="changeInput">
+            <button type="button" id="searchBtn">Dalej</button>
+            <ul id="displaySearch" class="hidden"></ul>
+        </fieldset>
+    </form>
+</body>
+</html>
