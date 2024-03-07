@@ -13,18 +13,25 @@ const userArr = [
 
 const nameInput = document.querySelector("#nameInput");
 const cityInput = document.querySelector("#cityInput");
-const ageInput = document.querySelector("#ageInput");
+const ageInput = document.querySelector("#ageInput");   
 const addBtn = document.querySelector("#addBtn");
-const displayTable = document.querySelector("#displayTable");
+const userListDisplay = document.querySelector("#userListDisplay");
 
-addBtn.addEventListener('click', ()=>{
-    displayTable.innerHTML = ''
-    displayTable.classList.add('hidden')
+addBtn.addEventListener('click', (evt)=>{
+    evt.preventDefault();
+    userListDisplay.innerHTML = ''
+    userListDisplay.classList.add('hidden')
 
     userArr.forEach(element => {
-        displayTable.innerHTML += `<li>${element.name}, ${element.city}, ${element.age} lat</li>`
+        const userListElement = document.createElement("li");
+        userListElement.classList.add("list-group-item");
+        const userListDeleteBtn = 
+
+        userListElement.innerHTML = `<strong>${element.name}</strong> lat <strong>${element.age}</strong> z miasta <strong>${element.city}</strong>
+        <button type="button" class="btn btn-outline-danger p-1 position-relative">X</button>`
+
+        userListDisplay.appendChild(userListElement);
     });
-    displayTable.classList.remove('hidden')
 })
 
 
@@ -74,3 +81,4 @@ searchBtn.addEventListener('click', ()=>{
             displaySearch.classList.remove('hidden');
     }
 })
+
